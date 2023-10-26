@@ -3,9 +3,27 @@ import './App.css';
 import React from 'react';
 
 class Item extends React.Component{
+constructor(props)
+{
+  super(props)
+
+  this.state = {
+    clicks:0
+  }
+}
+  clickMe(){
+    this.setState({
+      clicks: this.state.clicks + 1
+    })
+    console.log("i was clicked")
+  }
   render(){
     return(
-      <h1>Heck, yeah i breathe you!</h1>
+      <div>
+     {/*react click events and props*/} <h1 onClick={() => this.clickMe()}>Heck, yeah i breathe {this.props.name}
+     </h1>
+     <span>{this.state.clicks} is the number of clicks</span>
+     </div>
     )
   }
 }
@@ -15,7 +33,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Item />
+        <Item name="Elys"/>
         <a
           className="App-link"
           href="https://reactjs.org"
