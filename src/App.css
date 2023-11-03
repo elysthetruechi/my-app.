@@ -1,5 +1,5 @@
 .App {
-  text-align:left;
+  text-align:center;
 }
 
 .App-logo {
@@ -23,6 +23,18 @@
   font-size: calc(10px + 2vmin);
   color: pink;
   font-family: fantasy;
+}
+.btn{
+  background-color: black;
+  border: 1px solid pink;
+  color: pink;
+  padding: 20px;
+  font-size: 25px;
+}
+.btn:hover{
+  background-color: pink;
+  color: black;
+  border: 5px solid black;
 }
 
 .App-link {
